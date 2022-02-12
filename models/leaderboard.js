@@ -9,7 +9,9 @@ module.exports = (sequelize, DataTypes) => {
   LeaderBoard.init(
     {
       leaderBoardId: DataTypes.INTEGER,
-      userId: DataTypes.INTEGER
+      userId: DataTypes.INTEGER,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       sequelize,

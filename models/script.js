@@ -1,6 +1,6 @@
 'use strict';
 const { Model } = require('sequelize');
-const { sequelize, sequelize } = require('.');
+const { sequelize } = require('.');
 module.exports = (sequelize, DataTypes) => {
   class Script extends Model {
     static associate(models) {
@@ -11,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       scriptId: DataTypes.INTEGER,
       userId: DataTypes.INTEGER,
-      codeScript: DataTypes.STRING
+      codeScript: DataTypes.STRING,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       sequelize,

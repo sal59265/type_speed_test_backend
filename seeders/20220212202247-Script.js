@@ -8,17 +8,23 @@ module.exports = {
       {
         scriptId: 1,
         userId: 1,
-        codeScript: '<div></div>'
+        codeScript: '<div></div>',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         scriptId: 2,
         userId: 1,
-        codeScript: '<script></script>'
+        codeScript: '<script></script>',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         scriptId: 3,
         userId: 1,
-        codeScript: '<textarea></textarea>'
+        codeScript: '<textarea></textarea>',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]);
   },

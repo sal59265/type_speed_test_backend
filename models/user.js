@@ -24,7 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       password: DataTypes.STRING,
       wpm: DataTypes.INTEGER,
-      accuracy: DataTypes.INTEGER
+      accuracy: DataTypes.INTEGER,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       sequelize,

@@ -5,7 +5,9 @@ module.exports = {
     return queryInterface.bulkInsert('leaderboards', [
       {
         leaderBoardId: 1,
-        userId: 1
+        userId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]);
   },
