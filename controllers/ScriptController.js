@@ -1,5 +1,14 @@
 const { Script } = require('../models');
 
+const getAllScript = async (req, res) => {
+  try {
+    const scripts = await Script.findAll();
+    return res.status(200).json({ scripts });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
 const getScriptById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -13,6 +22,21 @@ const getScriptById = async (req, res) => {
   }
 };
 
+const updateScript = async (req, res) => {
+  try {
+    let id = parseInt(req.params.id);
+    const updatedScript = await Script.update(req.body, {
+      where: { id: id },
+      returning: true
+    });
+    res.send(updatedScript);
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports = {
-  getScriptById
+  getScriptById,
+  getAllScript,
+  updateScript
 };

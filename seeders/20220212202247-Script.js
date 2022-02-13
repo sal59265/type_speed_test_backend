@@ -8,21 +8,47 @@ module.exports = {
       {
         scriptId: 1,
         userId: 1,
-        codeScript: '<div></div>',
+        codeScript: `var isPalindrome = function (x) {
+          let reversed = ''
+          let xStr = x.toString()
+          for (let i of xStr) {
+            reversed = i + reversed
+          }
+          return reversed === xStr
+        }
+        `,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         scriptId: 2,
         userId: 1,
-        codeScript: '<script></script>',
+        codeScript: `function highestRank(arr) {
+          let freq = 0
+          let highNum = 0
+          arr.sort()
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === arr[i + 1]) {
+              freq = freq + 1
+            }
+          }
+        }
+        `,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         scriptId: 3,
         userId: 1,
-        codeScript: '<textarea></textarea>',
+        codeScript: `const twoSum = (nums, target) => {
+          for (let i = 0; i < nums.length; i++) {
+            for (let j = i + 1; j < nums.length; j++) {
+              if (nums[i] + nums[j] === target) {
+              }
+            }
+          }
+        };
+        `,
         createdAt: new Date(),
         updatedAt: new Date()
       }

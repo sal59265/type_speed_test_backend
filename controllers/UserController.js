@@ -37,7 +37,7 @@ const updateUser = async (req, res) => {
     let id = parseInt(req.params.id);
     const updatedUser = await User.update(req.body, {
       where: { id: id },
-      returnig: true
+      returning: true
     });
     res.send(updatedUser);
   } catch (error) {
